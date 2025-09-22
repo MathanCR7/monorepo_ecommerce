@@ -1,0 +1,16 @@
+
+{
+  "name": "my-fullstack-project",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm:dev:backend\" \"npm:dev:web\" \"npm:dev:admin\" \"npm:dev:mobile\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:web": "npm run dev --prefix frontend/web",
+    "dev:admin": "npm run dev --prefix frontend/admin",
+    "dev:mobile": "npm start --prefix frontend/mobile"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
